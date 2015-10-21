@@ -1164,6 +1164,17 @@
           <default>false</default>
           <control type="toggle" />
         </setting>
+        <setting id="pvrmanager.channelretries" type="integer" label="19077" help="36034">
+          <level>2</level>
+          <default>3</default>
+          <constraints>
+            <minimum>2</minimum>
+            <step>1</step>
+            <maximum>10</maximum>
+          </constraints>
+          <control type="spinner" format="integer">
+          </control>
+	</setting>
       </group>
       <group id="3">
         <setting id="pvrmanager.channelmanager" type="action" label="19199" help="36207">

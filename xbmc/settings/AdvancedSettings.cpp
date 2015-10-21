@@ -303,7 +303,8 @@ void CAdvancedSettings::Initialize()
   m_iEdlCommBreakAutowait = 0;             // Off by default
   m_iEdlCommBreakAutowind = 0;             // Off by default
 
-  m_curlconnecttimeout = 10;
+//  m_curlconnecttimeout = 10;
+  m_curlconnecttimeout = 3;
   m_curllowspeedtime = 20;
   m_curlretries = 2;
   m_curlDisableIPV6 = false;      //Certain hardware/OS combinations have trouble

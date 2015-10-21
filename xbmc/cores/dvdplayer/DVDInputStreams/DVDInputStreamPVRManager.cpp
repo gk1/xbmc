@@ -46,7 +46,8 @@ CDVDInputStreamPVRManager::CDVDInputStreamPVRManager(IDVDPlayer* pPlayer) : CDVD
   m_pLiveTV         = NULL;
   m_pOtherStream    = NULL;
   m_eof             = true;
-  m_ScanTimeout.Set(0);
+  m_ScanTimeout.Set((unsigned int) CSettings::Get().GetInt("pvrplayback.scantime") * 1000);
+  CLog::Log(LOGERROR, "Scantimeout set to : [%d]", (unsigned int) CSettings::Get().GetInt("pvrplayback.scantime") * 1000);
 }
 
 /************************************************************************

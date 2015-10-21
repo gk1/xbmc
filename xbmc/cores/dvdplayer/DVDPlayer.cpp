@@ -790,10 +790,10 @@ bool CDVDPlayer::OpenDemuxStream()
     SAFE_DELETE(m_pDemuxer);
 
   CLog::Log(LOGNOTICE, "Creating Demuxer");
-
-    int attempts = 10;
+    int attempts = (unsigned int) CSettings::Get().GetInt("pvrmanager.channelretries");
     while(!m_bStop && attempts-- > 0)
     {
+      CLog::Log(LOGERROR, "Connection attempt: %d", attempts);
       m_pDemuxer = CDVDFactoryDemuxer::CreateDemuxer(m_pInputStream);
       if(!m_pDemuxer && m_pInputStream->IsStreamType(DVDSTREAM_TYPE_PVRMANAGER))
       {

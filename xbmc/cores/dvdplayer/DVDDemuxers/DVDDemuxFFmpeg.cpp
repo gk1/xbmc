@@ -231,8 +231,8 @@ bool CDVDDemuxFFmpeg::Open(CDVDInputStream* pInput, bool streaminfo, bool filein
   m_pFormatContext->interrupt_callback = int_cb;
 
   // try to abort after 30 seconds
-  m_timeout.Set(30000);
-
+  m_timeout.Set((unsigned int) CSettings::Get().GetInt("pvrplayback.scantime") * 1000); //gk
+  CLog::Log(LOGERROR, "Setting demux timeout set to : [%d]", (unsigned int) CSettings::Get().GetInt("pvrplayback.scantime") * 1000);
   if( m_pInput->IsStreamType(DVDSTREAM_TYPE_FFMPEG) )
   {
     // special stream type that makes avformat handle file opening

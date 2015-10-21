@@ -8013,6 +8013,9 @@ msgid "Folder:"
 msgstr ""
 
 #empty string with id 19077
+msgctxt "#19077"
+msgid "Number of Reconnect attempts"
+msgstr ""
 
 msgctxt "#19078"
 msgid "Channel:"
@@ -14055,6 +14058,9 @@ msgid "Pause playback when switching to another source"
 msgstr ""
 
 #empty string with id 36034
+msgctxt "#36034"
+msgid "Number of Reconnect attempts"
+msgstr ""
 
 #. adjust refreshrate
 #: system/settings/settings.xml
